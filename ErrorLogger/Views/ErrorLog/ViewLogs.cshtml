@@ -1,0 +1,53 @@
+﻿@model PagedList.IPagedList<ErrorLoggerModel.Errors>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "ViewLogs";
+}
+
+<h2>View Logs</h2>
+@using (Html.BeginForm())
+{
+    <table class="table table-striped">
+        <thead class="thead-inverse">
+            <tr>
+                <th>
+                    @*Log ID*@
+                    @Html.ActionLink("Log ID", "ViewLogs", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th>
+                    @Html.ActionLink("Log Status", "ViewLogs", new { sortOrder = ViewBag.StatusSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th>
+                    @Html.ActionLink("Application", "ViewLogs", new { sortOrder = ViewBag.AppSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ErrorLoggerModel.Errors item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.logID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LogStatus.logStatusDesc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Application.appName)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<div class="centered">
+    @Html.ActionLink("View Logs(Graphical)", "ViewLogsGraphical") | @Html.ActionLink("View Applications", "ViewApplications")
+</div>
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("ViewLogs",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+
+

@@ -1,0 +1,88 @@
+﻿@model ErrorLoggerModel.Application
+@{
+    ViewBag.Title = "AdminApplicationDetail";
+}
+
+<h2>Admin Application Detail</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.appId )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.appName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.appType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Users)
+        </dt>
+
+        <dd>
+            @foreach (var item in Model.Users)
+            {
+                <p>
+                    @Html.DisplayFor(model => item.firstName)<span></span>
+                    @Html.DisplayFor(model => item.lastName)
+                </p>
+            }
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.appStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appStatus)
+        </dd>
+        
+    </dl>
+    @Html.ActionLink("Back", "EditApplication") 
+   
+</div>
+@using (Html.BeginForm("AdminApplicationDetail", "Admin", FormMethod.Post))
+{
+    <p>
+        Select User:
+       
+        @Html.HiddenFor(model => model.appId)
+        @Html.HiddenFor(model => model.appName)
+        @Html.ListBox("userId", (MultiSelectList)ViewBag.allUsers)<br />
+        <button class="btn btn-primary acenter" type="submit">Add User</button>
+    </p>
+}
+@using (Html.BeginForm("DeleteApplication", "Admin", FormMethod.Post))
+{
+    <p>
+        @Html.HiddenFor(model => model.appId)
+        @Html.HiddenFor(model => model.appName)
+        <button class="btn btn-primary acenter" type="submit">Delete Application</button>
+    </p>
+}
+@using (Html.BeginForm("ToggleApplication", "Admin"))
+{
+<p>
+    @Html.HiddenFor(model => model.appId)
+    @Html.HiddenFor(model => model.appName)
+    <button class="btn btn-primary acenter" type="submit">Toggle App Status</button>
+</p>
+}
+
+
+
+
+

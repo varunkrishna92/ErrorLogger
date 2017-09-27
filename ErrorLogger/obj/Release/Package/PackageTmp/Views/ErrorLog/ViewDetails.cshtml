@@ -1,0 +1,51 @@
+﻿@model ErrorLoggerModel.Errors
+@{
+    ViewBag.Title = "ViewDetails";
+}
+
+<h2>ViewDetails</h2>
+
+<div>
+    <h4>ErrorLogger</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.logID )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.logID )
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Application.appName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Application.appName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LogStatus.logStatusDesc )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogStatus.logStatusDesc )
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.firstName )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.firstName)
+        </dd>
+        @*<dt>
+            @Html.DisplayNameFor(model => model.desc )
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc)
+        </dd>*@
+    </dl>
+    @Html.ActionLink("Back", "Index") |    
+    @Html.ActionLink("Add New Bug", "ErrorLog")
+</div>
+

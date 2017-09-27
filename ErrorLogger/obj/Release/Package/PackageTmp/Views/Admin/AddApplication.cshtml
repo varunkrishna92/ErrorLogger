@@ -1,0 +1,38 @@
+﻿@model ErrorLoggerModel.Application
+@{
+    ViewBag.Title = "AddApplication";
+}
+@Styles.Render("~/Content/custom.css")
+<h2>Add Application</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal" style="align-content:center">
+            <div class="form-group" style="align-content:center">
+                @Html.LabelFor(model => model.appId)
+                @Html.TextBoxFor(model => model.appId)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.appName)
+                @Html.TextBoxFor(model => model.appName)
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.appType)
+                @Html.TextBoxFor(model => model.appType)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Users)
+                @Html.ListBox("userID", (MultiSelectList)ViewBag.Users)
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Submit <br /></button><span>&nbsp; &nbsp;</span>
+
+
+        
+    </div>
+}
+
+    
+

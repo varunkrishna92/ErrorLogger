@@ -1,0 +1,49 @@
+﻿@model ICollection<ErrorLoggerModel.Application>
+@{
+    ViewBag.Title = "ViewApplications";
+}
+
+<h2>Available Applications</h2>
+@using (Html.BeginForm("ViewApplications", "ErrorLog", FormMethod.Post))
+{
+    <p>
+        Find Application: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+    <table class="table table-striped">
+        <thead class="thead-inverse">
+            <tr>
+                <th>
+                    Application
+                    @*@Html.ActionLink("Application Name", "Index", new { sortOrder = ViewBag.NameSortParm })*@
+                </th>
+                <th>
+                    Application ID
+                </th>
+                <th>
+                    Application Type
+                    @*@Html.DropDownList("userID", (MultiSelectList)ViewBag.inactiveUsers)<br />*@
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ErrorLoggerModel.Application item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.appName, "ApplicationDetail", new { appId = item.appId } )
+                        @*@Html.DisplayFor(modelItem => item.appName)*@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.appId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.appType)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+

@@ -1,0 +1,16 @@
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\LoaderandLogic.dll
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\LoaderandLogic.pdb
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\Newtonsoft.Json.dll
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\ErrorLoggerModel.pdb
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\EntityFramework.xml
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\Newtonsoft.Json.xml
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\obj\Release\LoaderandLogic.csprojResolveAssemblyReference.cache
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\obj\Release\LoaderandLogic.dll
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\obj\Release\LoaderandLogic.pdb
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\Dapper.dll
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\Dapper.xml
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\LoaderandLogic.dll.config
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\EntityFramework.dll
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Varun\Documents\Visual Studio 2015\Projects\ErrorLogger\LoaderandLogic\bin\Release\ErrorLoggerModel.dll

@@ -1,0 +1,28 @@
+﻿@model ICollection<ErrorLoggerModel.Application>
+@{
+    ViewBag.Title = "AdminAppData";
+}
+
+<h3>Admin Portal</h3>
+
+<h4>Number of Applications:</h4>
+
+<h5></h5>
+@using (Html.BeginForm("ViewApplications", "Admin", FormMethod.Post))
+{
+    <input type="number" name="appID" id="appId" />
+
+
+        <input type="submit" value="Retrieve" />
+}
+
+@*@foreach (ErrorLoggerModel.ErrorLogger error in Model)
+    {
+         @Html.ActionLink("Retrieve", "ViewDetails", new { id = error.bugId });
+        <br />
+    }*@
+
+<br /><br />
+@Html.ActionLink("Add Application", "AddApplication")
+<br/>
+@Html.ActionLink("Manage Applications", "EditApplication")

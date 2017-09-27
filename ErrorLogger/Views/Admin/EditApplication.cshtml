@@ -1,0 +1,91 @@
+﻿@model ICollection<ErrorLoggerModel.Application>
+@{
+    ViewBag.Title = "EditApplication";
+}
+
+<h4>Edit Application</h4>
+@using (Html.BeginForm())
+{
+    <p>
+        Find Application: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+    <table class="table table-striped">
+        <thead class="thead-inverse">
+            <tr>
+                <th>
+                    Application
+                </th>
+                <th>
+                    Application ID
+                </th>
+                <th>
+                    Users
+                    @*@Html.DropDownList("userID", (MultiSelectList)ViewBag.inactiveUsers)<br />*@
+                </th>
+                <th>
+                    Application Status
+                </th>
+            </tr>
+            </thead>
+        <tbody>
+            @foreach (ErrorLoggerModel.Application item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.appName, "AdminApplicationDetail", new { appId = item.appId } )
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.appId)
+                    </td>
+                    <td>
+                        @*@Html.DropDownList("userID", item.Users. )*@
+                        @foreach (var user in item.Users)
+                        {
+                            <p>
+                                @user.firstName
+                            </p>
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.appStatus)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+@*@using (Html.BeginForm("AddUser", "Admin", FormMethod.Post))
+{
+    <p>
+        Select User:
+        @Html.DropDownList("userID", (MultiSelectList)ViewBag.allUsers)<br/>
+        <button class="btn btn-primary acenter" style="margin:auto;display:block"  type="submit">Add User</button>
+    </p>
+}*@
+
+
+@*@using (Html.BeginForm("DeleteApplication", "Admin", FormMethod.Post))
+{
+    <p>
+        <button class="btn btn-primary acenter" style="margin:auto;display:block" type="submit">Delete Application</button>
+    </p>
+}*@
+<span></span>
+@using (Html.BeginForm("AddApplication", "Admin", FormMethod.Get))
+{
+    <p>
+        <button class="btn btn-primary acenter" style="margin:auto;display:block" type="submit">Add Application</button>
+    </p>
+}
+@*@using (Html.BeginForm("DisableApplication", "Admin", FormMethod.Get))
+{
+    <p>
+        <button class="btn btn-primary acenter" type="submit">Toggle App Status</button>
+    </p>
+}*@
+@*@Html.ActionLink("Add Application", "AddApplication")*@
+
+
+

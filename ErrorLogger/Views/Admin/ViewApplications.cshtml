@@ -1,0 +1,40 @@
+﻿@model ErrorLoggerModel.Application
+@{
+    ViewBag.Title = "ViewApplications";
+}
+
+<h2>View Details</h2>
+
+<div>
+    <h4>Error Logger</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.appId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.appName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.appType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appType)
+        </dd>
+        
+    </dl>
+    @Html.ActionLink("Back", "AdminAppData") |
+    @Html.ActionLink("Add New Application", "AddApplication")
+</div>
+
+
+

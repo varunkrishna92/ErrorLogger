@@ -1,0 +1,95 @@
+﻿body {
+    background-color:#C3BBB9;
+    /*color: #CCB6B2;*/
+    font-size:small;
+}
+
+.navlogo{
+    max-width:50px; 
+    margin-top: 1px;
+    margin-right: 15px;
+    border-radius: 25px;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #19677f;
+}
+
+/*.navbar{
+    background-color: #C0C0C0;
+    color: #000080;
+}*/
+
+.navbar-nav{
+    color: #c7c8c9;
+}
+
+.jumbo{
+    text-align:center;
+    background-color: #6C6462; 
+    color: #c7c8c9;
+}
+
+.iconColor{
+    color: #c7c8c9;
+}
+
+.label
+{
+ margin-right: 10px;
+} 
+.textbox
+{
+ margin-left: 10px;
+}
+
+.acenter{
+    text-align: center;
+}
+
+button {
+    margin:auto;
+  display:block;
+}
+
+.listBox
+{
+   width: 200px; //set your width or make it auto
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+    width: 800px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #428bca;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #428bca;
+}
+
+.div-style {
+    padding-right:5em
+}
+
+thead {
+    background-color:#312E2E; 
+    color:white
+}
+
+button{
+    margin:auto;
+    display:block
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    margin:auto;
+    display:block;
+}

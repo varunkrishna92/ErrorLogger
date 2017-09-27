@@ -1,0 +1,63 @@
+﻿@model ErrorLoggerModel.Errors
+@{
+    ViewBag.Title = "Add";
+}
+
+@Styles.Render("~/Content/custom.css")
+<h2>Add</h2>
+
+@using (Html.BeginForm())
+{
+    <form style="padding-right:5em">
+        <div class="form-group" style="padding-right:5em">
+            @Html.LabelFor(model => model.logID)
+            @Html.TextBoxFor(model => model.logID)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Application.appId)
+            @Html.TextBoxFor(model => model.Application.appId)            
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Users.userId)
+            @Html.TextBoxFor(model => model.Users.userId)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LogStatus.logStatusID)
+            @Html.TextBoxFor(model => model.LogStatus.logStatusID)
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Submit <br /></button><span>&nbsp; &nbsp;</span>
+    </form>
+}
+
+<div>
+    <button id="btnAdd">Add using REST</button>
+    @Html.ActionLink("Add using REST", "Add")
+</div>
+
+<script type="text/javascript">
+
+    $("#btnAdd").click(function () {
+
+        var ErrorLog = {
+            "logID": $(model.logID).val(),
+            "appId": $(model.Application.appId).val(),
+            "userId": $(model.Users.userId).val(),
+            "logStatusID": $(model.LogStatus.logStatusID).val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: 'http://localhost:28206/api/Add/PostLogDetails',
+            data: JSON.stringify(ErrorLog),
+            contentType: "application/json;charset=utf-8",
+            processData: true,
+            success: function (data, status, xhr) {
+                alert("The result is : " + status);
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+    });
+</script>

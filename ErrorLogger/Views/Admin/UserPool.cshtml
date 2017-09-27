@@ -1,0 +1,98 @@
+﻿@model ICollection<ErrorLoggerModel.Users>
+@{
+    ViewBag.Title = "UserPool";
+}
+@Styles.Render("~/Content/custom.css")
+<h3>User Pool</h3>
+@*<form style="padding-right:5em">
+    <div class="form-group" style="padding-right:5em">
+        @using (Html.BeginForm("UserPoolDeact", "Admin", FormMethod.Post))
+        {
+            <p>
+                Select User to Deactivate:
+               @Html.DropDownList("userID", (MultiSelectList)ViewBag.activeUsers)<br />
+                <button type="submit">Deactivate User</button>
+            </p>
+        }
+       
+    </div>
+    <div class="form-group" style="padding-right:5em">
+        @using (Html.BeginForm("UserPoolAct", "Admin", FormMethod.Post))
+        {
+            <p>
+                Select User to Activate:
+               @Html.DropDownList("userID", (MultiSelectList)ViewBag.inactiveUsers)<br />
+                <button type="submit">Activate User</button>
+            </p>
+        }
+        
+    </div>
+</form>*@
+<table class="table table-striped">
+    <thead class="thead-inverse">
+        <tr>
+            <th>
+                ID
+                
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Status
+                @*@Html.DropDownList("userID", (MultiSelectList)ViewBag.inactiveUsers)<br />*@
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ErrorLoggerModel.Users item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstName @*+ item.lastName*@)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modeItem => item.status)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="form-group">
+    @using (Html.BeginForm("UserPoolDeact", "Admin", FormMethod.Post))
+    {
+        <p>
+            Select User to Deactivate:
+            @Html.DropDownList("userID", (MultiSelectList)ViewBag.activeUsers)<br />
+            <button type="submit">Deactivate User</button>
+        </p>
+    }
+
+</div>
+<div class="form-group">
+    @using (Html.BeginForm("UserPoolAct", "Admin", FormMethod.Post))
+    {
+        <p>
+            Select User to Activate:
+            @Html.DropDownList("userID", (MultiSelectList)ViewBag.inactiveUsers)<br />
+            <button type="submit">Activate User</button>
+        </p>
+    }
+
+</div>
+
+
+
+
+
+
+

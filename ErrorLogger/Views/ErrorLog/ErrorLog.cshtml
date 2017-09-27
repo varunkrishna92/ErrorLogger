@@ -1,0 +1,50 @@
+﻿@model ErrorLoggerModel.Errors
+
+@{
+    ViewBag.Title = "ErrorLog";
+    
+}
+
+@Styles.Render("~/Content/custom.css")
+<h2>ErrorLog</h2>
+
+@using (Html.BeginForm())
+{
+<form style="padding-right:5em">
+    <div class="form-group" style="padding-right:5em">
+        @Html.LabelFor(model => model.logID)
+        @Html.TextBoxFor(model => model.logID)
+    </div>
+<div class="form-group">
+
+    @Html.LabelFor(model => model.Application.appName)
+        @Html.TextBoxFor(model => model.Application.appId)
+        @*@Html.DropDownListFor(model => model.Application.appId, Model.Application.GetAllCategories )*@     
+     
+</div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Users.userId ) 
+        @Html.TextBoxFor(model => model.Users.userId)
+ </div>
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.assignedBy )
+        @Html.TextBoxFor(model => model.assignedBy)
+</div>*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.LogStatus.logStatusID )
+        @Html.TextBoxFor(model => model.LogStatus.logStatusID)
+    </div>
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.desc )
+        @Html.TextBoxFor(model => model.desc) </div>*@ 
+
+   
+        
+        <br />
+    
+   
+    <button type="submit" class="btn btn-primary">Submit</button><span>&nbsp; &nbsp;</span>
+    
+
+ </form>
+}

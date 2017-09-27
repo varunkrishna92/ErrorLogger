@@ -1,0 +1,30 @@
+﻿@model ICollection<ErrorLoggerModel.Errors>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h4>Number of errors: @Model.Count()</h4>
+
+<h5></h5>
+@using (Html.BeginForm("ViewDetails", "ErrorLog", FormMethod.Post))
+{
+    <input type="number" name="bugID" id="bugId" />
+    
+
+    <input type="submit" value="Retrieve" />
+}
+
+@*@foreach (ErrorLoggerModel.ErrorLogger error in Model)
+{
+     @Html.ActionLink("Retrieve", "ViewDetails", new { id = error.bugId });
+    <br />
+}*@
+
+<br /><br />
+@Html.ActionLink("Add New Bug", "ErrorLog")<br/>
+@Html.ActionLink("View Logs", "ViewLogs")<br/>
+@Html.ActionLink("View Logs(Graphical)", "ViewLogsGraphical")<br />
+@Html.ActionLink("View Applications", "ViewApplications")
+ 

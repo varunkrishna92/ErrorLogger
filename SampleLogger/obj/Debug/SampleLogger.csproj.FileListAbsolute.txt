@@ -1,0 +1,15 @@
+C:\Users\doomhmmr\Desktop\LoggerTest\SampleLogger\bin\Debug\SampleLogger.dll
+C:\Users\doomhmmr\Desktop\LoggerTest\SampleLogger\bin\Debug\SampleLogger.pdb
+C:\Users\doomhmmr\Desktop\LoggerTest\SampleLogger\obj\Debug\SampleLogger.csprojResolveAssemblyReference.cache
+C:\Users\doomhmmr\Desktop\LoggerTest\SampleLogger\obj\Debug\SampleLogger.dll
+C:\Users\doomhmmr\Desktop\LoggerTest\SampleLogger\obj\Debug\SampleLogger.pdb
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\08 Week 8 - Databases - SQL and Design\Code - 02 - LoggerTestHarness\SampleLogger\bin\Debug\SampleLogger.dll
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\08 Week 8 - Databases - SQL and Design\Code - 02 - LoggerTestHarness\SampleLogger\bin\Debug\SampleLogger.pdb
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\08 Week 8 - Databases - SQL and Design\Code - 02 - LoggerTestHarness\SampleLogger\obj\Debug\SampleLogger.csprojResolveAssemblyReference.cache
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\08 Week 8 - Databases - SQL and Design\Code - 02 - LoggerTestHarness\SampleLogger\obj\Debug\SampleLogger.dll
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\08 Week 8 - Databases - SQL and Design\Code - 02 - LoggerTestHarness\SampleLogger\obj\Debug\SampleLogger.pdb
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\12 Week 13 - IIS, Test Harness\Code - 01 - LoggerTestHarness\SampleLogger\bin\Debug\SampleLogger.dll
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\12 Week 13 - IIS, Test Harness\Code - 01 - LoggerTestHarness\SampleLogger\bin\Debug\SampleLogger.pdb
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\12 Week 13 - IIS, Test Harness\Code - 01 - LoggerTestHarness\SampleLogger\obj\Debug\SampleLogger.csprojResolveAssemblyReference.cache
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\12 Week 13 - IIS, Test Harness\Code - 01 - LoggerTestHarness\SampleLogger\obj\Debug\SampleLogger.dll
+D:\Dropbox\Dropbox\Teaching SU\CSE 686\__Shared CSE 686\12 Week 13 - IIS, Test Harness\Code - 01 - LoggerTestHarness\SampleLogger\obj\Debug\SampleLogger.pdb

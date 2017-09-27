@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Error Logger</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Chart")
+    @Styles.Render("~/Content/custom.css")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top navbar-inverse " >
+
+        <div class="container">
+            <a href="#" class="navbar-left"><img class="navlogo" src="~/Content/ga1.jpg"></a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Error Logger", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse nav-tabs">
+                <ul class="nav navbar-nav">
+                    <li style="color: #1a8ebc">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li style="color: #1a8ebc">@Html.ActionLink("Error Logs", "ViewLogs", "ErrorLog")</li>
+                    @*<li>@Html.ActionLink("Role", "Index", "Role")</li>*@
+                    @*@Html.ActionLink("Admin Control", "AdminAppData", "Admin")*@
+                    <li class="dropdown"><a style="color: #1a8ebc" href="#" data-toggle="dropdown">Admin<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Manage App Data", "EditApplication", "Admin")</li>
+                            <li>@Html.ActionLink("Manage User Pool", "UserPool", "Admin")</li>
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Varun Krishna</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

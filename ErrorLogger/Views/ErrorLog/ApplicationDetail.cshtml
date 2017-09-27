@@ -1,0 +1,52 @@
+﻿@model PagedList.IPagedList<ErrorLoggerModel.Errors>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "ApplicationDetail";
+}
+
+<h2>Error Logs</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        Find Application: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+    <table class="table table-striped">
+        <thead class="thead-inverse">
+            <tr>
+                <th>
+                    @*Log ID*@
+                    @Html.ActionLink("Log ID", "ViewLogs", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                </th>
+                <th>
+                    Log Status
+                </th>
+                @*<th>
+                    Application
+                </th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ErrorLoggerModel.Errors item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.logID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LogStatus.logStatusDesc)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Application.appName)
+                    </td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("ApplicationDetail",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
